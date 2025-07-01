@@ -29,10 +29,10 @@ for nome_arquivo in os.listdir(CAMINHO):
                     novo_nome = f"{codigo}{sufixo}.jpg"
                     origem = os.path.join(CAMINHO, nome_arquivo)
                     destino = os.path.join(CAMINHO_OUT, novo_nome)
-                    #shutil.copy2(origem, destino)
+                    shutil.copy2(origem, destino)
                     # Reduz o tamanho do arquivo mantendo boa qualidade
-                    with Image.open(origem) as img:
-                        img.save(destino, "JPEG", quality=85, optimize=True)
+                    #with Image.open(origem) as img:
+                    #    img.save(destino, "JPEG", quality=85, optimize=True)
                     print(f"Arquivo criado: {novo_nome}")
 
 print("Processo finalizado.")
